@@ -9,13 +9,13 @@ begin
 
   scheduler.at '10:00:00' do
     Console.logger.info 'Job at 10:00:00 Started'
-    Publisher.push_data({ consumer: 'Crawler', processor: 'TopSearches', data: { urls: ['https://ahrefs.com/blog/top-amazon-searches'] } },
+    Publisher.push_data({ consumer: 'Crawler', processor: 'TopSearches', data: { urls: ['https://www.semrush.com/blog/most-searched-items-amazon'] } },
                         'urls')
   end
 
   scheduler.every '1s' do
     Console.logger.info 'Job every 1s Started'
-    Publisher.push_data({ consumer: 'Crawler', processor: 'TopSearches', data: { urls: ['https://ahrefs.com/blog/top-amazon-searches'] } },
+    Publisher.push_data({ consumer: 'Crawler', processor: 'TopSearches', data: { urls: ['https://www.semrush.com/blog/most-searched-items-amazon'] } },
                         'urls')
   end
 
