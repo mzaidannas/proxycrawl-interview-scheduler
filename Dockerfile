@@ -1,5 +1,5 @@
 # Using alpine image for small size
-FROM 3.0.2-alpine:latest
+FROM 3.1.0-preview1-alpine:latest
 
 # Install runtime dependencies
 RUN apk update && apk add --update tzdata shared-mime-info git
@@ -9,6 +9,7 @@ RUN apk add --update --no-cache --virtual build-dependency libxml2-dev libxslt-d
 
 # Set an environment variable where the SCHEDULER app is installed to inside of Docker image
 ENV SCHEDULER_ROOT /var/www/proxycrawler/api
+ENV RUBY_OPT "--yjit"
 
 # make a new directory where our project will be copied
 RUN mkdir -p $SCHEDULER_ROOT
