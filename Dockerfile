@@ -9,7 +9,6 @@ RUN apk add --update --no-cache --virtual build-dependency libxml2-dev libxslt-d
 
 # Set an environment variable where the SCHEDULER app is installed to inside of Docker image
 ENV SCHEDULER_ROOT /var/www/proxycrawler/api
-ENV RUBY_OPT "--yjit"
 
 # make a new directory where our project will be copied
 RUN mkdir -p $SCHEDULER_ROOT
@@ -37,5 +36,8 @@ RUN if [[ "$SCHEDULER_ENV" != "development" ]]; then\
 
 # Adding project files
 COPY . .
+
+# Use ruby's jit in time compiler for better performance
+ENV RUBY_OPT "--yjit"
 
 CMD [ "ruby", "schedule.rb" ]

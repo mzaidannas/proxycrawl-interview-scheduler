@@ -21,7 +21,7 @@ GEM
     fugit (1.5.2)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
-    io-console (0.5.9)
+    io-console (0.5.10)
     io-event (1.0.1)
     irb (1.4.1)
       reline (>= 0.3.0)
@@ -52,7 +52,7 @@ DEPENDENCIES
   rufus-scheduler
 
 RUBY VERSION
-   ruby 3.1.0p-1
+   ruby 3.1.0p0
 
 BUNDLED WITH
-   2.3.0.dev
+   2.3.3
