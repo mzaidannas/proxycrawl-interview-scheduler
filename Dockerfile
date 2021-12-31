@@ -40,4 +40,4 @@ COPY . .
 # Use ruby's jit in time compiler for better performance
 ENV RUBY_OPT "--yjit"
 
-CMD [ "ruby", "schedule.rb" ]
+CMD [ "ruby", "scheduler.rb" ]
