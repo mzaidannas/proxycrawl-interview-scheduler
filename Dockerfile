@@ -1,5 +1,5 @@
 # Using alpine image for small size
-FROM 3.1.0-preview1-alpine:latest
+FROM ruby:3.1.0-alpine
 
 # Install runtime dependencies
 RUN apk update && apk add --update tzdata shared-mime-info git
