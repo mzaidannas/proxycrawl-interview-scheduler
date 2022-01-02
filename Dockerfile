@@ -40,4 +40,6 @@ COPY . .
 # Use ruby's jit in time compiler for better performance
 ENV RUBY_OPT "--yjit"
 
+ENTRYPOINT [ "./entrypoint.sh" ]
+
 CMD [ "ruby", "scheduler.rb" ]
