@@ -16,6 +16,9 @@ RUN mkdir -p $SCHEDULER_ROOT
 # Set working directory within container
 WORKDIR $SCHEDULER_ROOT
 
+ARG SCHEDULER_ENV
+ENV SCHEDULER_ENV $SCHEDULER_ENV
+
 # Adding gems
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
