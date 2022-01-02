@@ -32,7 +32,7 @@ RUN if [[ "$SCHEDULER_ENV" == "test" ]]; then\
 # Remove build dependencies and install runtime dependencies
 RUN if [[ "$SCHEDULER_ENV" != "development" ]]; then\
   apk del build-dependency &&\
-  apk add --update libxml2 libxslt postgresql-client postgresql-libs libcurl; fi
+  apk add --update libxml2 libxslt libcurl; fi
 
 # Adding project files
 COPY . .
